@@ -4,4 +4,5 @@
 #### 项目位置：project-demo
 
 ### 目录
-   1. 基于Element-ui的table组件动态合并行或列
+   1. 基于Element-ui的table组件动态合并行或列 (代码文件：src/views/Table.vue)
+
