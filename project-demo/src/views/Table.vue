@@ -53,6 +53,15 @@ export default {
             "第一条10G (no latest data,no latest data)	第二条10G (no latest data,no latest data)	第三条10G (no latest data,no latest data)	第四条10G"
         },
         {
+          operators: "电信",
+          province: "浙江",
+          room: "杭州双线２",
+          abbreviation: "GZ_DB2",
+          bandwidth: "10G",
+          flow:
+            "第一条10G (no latest data,no latest data)	第二条10G (no latest data,no latest data)	第三条10G (no latest data,no latest data)	第四条10G"
+        },
+        {
           operators: "联通",
           province: "江西",
           room: "杭州双线２",
@@ -119,11 +128,9 @@ export default {
             provinceObj[element.province].push(index);
           } else if (element.province == prevPro) {
             provinceObj[element.province].push(index);
-          } else {
-            provinceObj[element.province] = [];
-            provinceObj[element.province].push(index);
           }
         } else {
+         
           provinceObj[element.province] = [];
           provinceObj[element.province].push(index);
         }
@@ -139,6 +146,7 @@ export default {
           this.provinceArr.push(provinceObj[i]);
         }
       }
+      console.log(provinceObj);
     },
     objectSpanMethod({ row, rowIndex, column, columnIndex }) {
       if (columnIndex === 0) {
