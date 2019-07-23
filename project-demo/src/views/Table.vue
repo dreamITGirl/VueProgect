@@ -62,6 +62,15 @@ export default {
             "第一条10G (no latest data,no latest data)	第二条10G (no latest data,no latest data)	第三条10G (no latest data,no latest data)	第四条10G"
         },
         {
+          operators: "电信",
+          province: "浙江",
+          room: "杭州双线２",
+          abbreviation: "GZ_DB2",
+          bandwidth: "10G",
+          flow:
+            "第一条10G (no latest data,no latest data)	第二条10G (no latest data,no latest data)	第三条10G (no latest data,no latest data)	第四条10G"
+        },
+        {
           operators: "联通",
           province: "江西",
           room: "杭州双线２",
@@ -87,7 +96,34 @@ export default {
           bandwidth: "10G",
           flow:
             "第一条1G (no latest data,no latest data)第二条1G (no latest data,no latest data)"
-        }
+        },
+        {
+          operators: "移动",
+          province: "广东",
+          room: "广州双线２",
+          abbreviation: "GZ_DB2",
+          bandwidth: "10G",
+          flow:
+            "第一条1G (no latest data,no latest data)第二条1G (no latest data,no latest data)"
+        },
+        {
+          operators: "移动",
+          province: "广东",
+          room: "广州双线２",
+          abbreviation: "GZ_DB2",
+          bandwidth: "10G",
+          flow:
+            "第一条1G (no latest data,no latest data)第二条1G (no latest data,no latest data)"
+        },
+        {
+          operators: "移动",
+          province: "广东",
+          room: "广州双线２",
+          abbreviation: "GZ_DB2",
+          bandwidth: "10G",
+          flow:
+            "第一条1G (no latest data,no latest data)第二条1G (no latest data,no latest data)"
+        },
       ],
       rowIndex: "-1",
       OrderIndexArr: [],
@@ -101,7 +137,7 @@ export default {
       this.tableData.forEach((element, index) => {
         element.rowIndex = index;
         if (OrderObj[element.operators]) {
-          let nextItem = this.tableData[index + 1].operators
+          let nextItem = this.tableData[index + 1]
             ? this.tableData[index + 1].operators
             : undefined;
           let prevItem = this.tableData[index - 1].operators
@@ -116,7 +152,7 @@ export default {
           OrderObj[element.operators] = [];
           OrderObj[element.operators].push(index);
         }
-
+        
         if (provinceObj[element.province]) {
           let nextPro = this.tableData[index + 1]
             ? this.tableData[index + 1].province
@@ -135,18 +171,47 @@ export default {
           provinceObj[element.province].push(index);
         }
       });
+      
       // 将数组长度大于1的值 存储到this.OrderIndexArr（也就是需要合并的项）
       for (let k in OrderObj) {
         if (OrderObj[k].length > 1) {
           this.OrderIndexArr.push(OrderObj[k]);
         }
       }
+     
       for (let i in provinceObj) {
         if (provinceObj[i].length > 1) {
-          this.provinceArr.push(provinceObj[i]);
+          this.handleData(provinceObj[i])
         }
       }
-      console.log(provinceObj);
+    },
+    handleData(data){
+      console.log(data,'data');
+      let temp = data;
+      let itemArr = [];
+      let itemArrNew = [];
+      let resArr = [];
+      if (data.length>2) {
+          for (let i = 0; i < data.length; i++) {
+              if (data[i+1]) {
+                if (data[i+1] - data[i] > 1) {
+                  itemArr = data.slice(0,i+1)
+                  itemArrNew = temp.slice(i+1,temp.length)
+                  break;
+                }else{
+                  resArr = data
+                }
+              }
+          }
+          if (itemArr.length>0 || itemArrNew.length>0) {
+            this.provinceArr.push(itemArr)
+            this.provinceArr.push(itemArrNew)
+          }else{
+            this.provinceArr.push(data)
+          }
+      }else{
+        this.provinceArr.push(data)
+      }
     },
     objectSpanMethod({ row, rowIndex, column, columnIndex }) {
       if (columnIndex === 0) {
