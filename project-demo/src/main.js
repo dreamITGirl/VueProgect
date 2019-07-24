@@ -6,9 +6,15 @@ import store from './store'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+// require( 'vis-network/dist/vis-network.min.js')
+
+
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
+
+
+
 
 new Vue({
   router,

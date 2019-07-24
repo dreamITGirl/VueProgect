@@ -12,5 +12,9 @@
   font-size: 12px;
   font-family: "微软雅黑";
 }
+#app{
+  width:100%;
+  min-height:600px;
+}
 </style>
 
