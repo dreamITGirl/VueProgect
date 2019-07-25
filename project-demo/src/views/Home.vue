@@ -5,6 +5,8 @@
           <router-link to="/table" class="catalog-item">基于Element-ui的table组件动态合并行或列</router-link>
           <router-link to="/baseUse"  class="catalog-item">使用vis.js基础拓扑图的渲染一</router-link>
           <router-link to="/baseUseTwo"  class="catalog-item">使用vis.js基础拓扑图的渲染二</router-link>
+          <router-link to="/roomInfo" class="catalog-item">Vue.Draggable的学习</router-link>
+          
       </div>
   </div>
 </template>

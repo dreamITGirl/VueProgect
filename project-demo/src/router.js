@@ -28,6 +28,11 @@ export default new Router({
       path:'/baseUseTwo',
       name:'baseUseTwo',
       component: () => import(/* webpackChunkName: "about" */ './components/visComponent/BaseuseTwo.vue')
+    },
+    {
+      path:'/roomInfo',
+      name:'roomInfo',
+      component: () => import(/* webpackChunkName: "about" */ './components/Drag/Room.vue')
     }
   ]
 })
