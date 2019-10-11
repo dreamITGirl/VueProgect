@@ -11,5 +11,6 @@
    5. echarts的研究demo(深度研究)
    6. 富文本编辑器的使用一 (src/components/editor)
    7. 文字无缝滚动的示例 (src/components/RidingLatern)
+   8. 测试上传代码（疯了）
 
 
