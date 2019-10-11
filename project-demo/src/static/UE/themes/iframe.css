@@ -1,0 +1,10 @@
+/*可以在这里添加你自己的css*/
+.edui-editor.edui-default{ 
+    z-index: 100 !important;
+}
+.edui-default .edui-button-body{ 
+    height: 25px;
+}
+.edui-toolbar.edui-default{
+    line-height: 24px !important;
+}

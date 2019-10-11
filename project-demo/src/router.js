@@ -30,9 +30,34 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './components/visComponent/BaseuseTwo.vue')
     },
     {
-      path:'/roomInfo',
+      path:'/simple',
+      name:'simple',
+      component: () => import(/* webpackChunkName: "about" */ './components/Drag/Simple.vue')
+    },
+    {
+      path:'/room',
       name:'roomInfo',
       component: () => import(/* webpackChunkName: "about" */ './components/Drag/Room.vue')
+    },
+    {
+      path:'/UE',
+      name:'UE',
+      component: () => import('./components/editor/Ueditor.vue')
+    },
+    {
+      path:'/ckeditor',
+      name:'ckeditor',
+      component: () => import('./components/editor/CKEditor.vue')
+    },
+    {
+      path:'/ridingLantern',
+      name:'ridingLantern',
+      component: () => import('./components/RidingLatern/Rading.vue')
+    },
+    {
+      path:'/rideLanternTwo',
+      name:'rideLanternTwo',
+      component: () => import('./components/RidingLatern/RideLanternTwo.vue')
     }
   ]
 })

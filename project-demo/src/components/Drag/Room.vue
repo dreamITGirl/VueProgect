@@ -6,9 +6,6 @@
             :moved="moved" 
             @change="changeList"
             >
-            <!--  @end="removeEnd" 
-            @start="removeStart" 
-            @update="updateList"  -->
             <div v-for="(item,i) in listAll" :key="i">
                 <p class="list-group-item" @click="showList(i,listAll)" 
                     :style="{backgroundColor:item.bgColor}">
@@ -1182,43 +1179,32 @@ export default {
             }else{
                 var oldIdentifiterCol = this.listOne[oldIndex].identifier.split('-')[1]
             }       
-            console.log(newIndex,'newIndex===');
+            
             let newIdentifiterRow = 
                 parseInt(newIndex / 30) + (newIndex % 30 < 30 ? 1 : newIndex % 30)
-            console.log(newIdentifiterRow,'newIdentifiterRow');
+           
+
             if (newIndex > this.listOne.length) {
                 var newIdentifiterCol = this.listAll[newIndex].identifier.split('-')[1]
             }else{
-                
                 var newIdentifiterCol = this.listOne[newIndex].identifier.split('-')[1]
             }
+
             let item = this.listAll[newIndex-1< 0 ? 0 : newIndex-1];
             let itemO = this.listAll[newIndex+1]
             let itemMove = this.listAll[newIndex]
-           
-           
-            this.listAll[oldIndex].bgColor = '#f4f4f4'
-            this.listAll[oldIndex].list = [];
-            this.listAll[oldIndex].identifier = oldIdentifiterRow+'-'+oldIdentifiterCol
-            this.listAll[newIndex].identifier = newIdentifiterRow+'-'+newIdentifiterCol
+            let resetArr = [];
+            
+            
+           console.log(this.listAll[oldIndex]);
+         
         },
         showList(index,list){
             list[index].showList = !list[index].showList
         },
         removeStart(evt){
-            console.log(evt,'start');
-            
             let oldIdentifier = this.listOne[evt.oldIndex].identifier;
            
-            // this.listAll[evt.oldIndex] = {
-            //     name:'',
-            //     id:'',
-            //     identifier:oldIdentifier,
-            //     showList:false,
-            //     color:'',
-            //     bgColor:'#f4f4f4',
-            //     list:[]
-            // }
         },
         removeEnd(evt){
             // console.log(evt,'===');
