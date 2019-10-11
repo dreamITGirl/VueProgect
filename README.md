@@ -8,5 +8,8 @@
    2. 使用vis.js 进行拓扑图的渲染[使用安装的方式] (代码文件： src/components/visComponent)
    3. 拖拽记录节点位置(原生js实现)
    4. 拖拽插件使用(vuedraggable.js 基于Sortable.js的vue组件，用以实现拖拽功能)
+   5. echarts的研究demo(深度研究)
+   6. 富文本编辑器的使用一 (src/components/editor)
+   7. 文字无缝滚动的示例 (src/components/RidingLatern)
 
 
