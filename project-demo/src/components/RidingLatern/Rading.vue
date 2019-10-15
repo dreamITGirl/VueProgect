@@ -11,6 +11,7 @@
     </div>
 </template>
 <script>
+
 export default {
     name:'ridingLantern',
     data(){

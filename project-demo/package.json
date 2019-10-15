@@ -11,6 +11,7 @@
     "@ckeditor/ckeditor5-build-classic": "^12.3.1",
     "axios": "^0.19.0",
     "core-js": "^2.6.5",
+    "dayjs": "^1.8.16",
     "element-ui": "^2.10.1",
     "vis-network": "^5.0.0",
     "vue": "^2.6.10",

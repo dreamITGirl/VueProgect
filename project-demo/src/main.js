@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import axios from 'axios'
 // import $ from 'jquery'
+import dayjs from 'dayjs'
 
 import scroll from 'vue-seamless-scroll'
 Vue.use(scroll)
@@ -11,6 +12,8 @@ Vue.use(scroll)
 // 引入Element-ui
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.prototype.$d = dayjs
 
 // 将axios绑定在Vue原型上
 

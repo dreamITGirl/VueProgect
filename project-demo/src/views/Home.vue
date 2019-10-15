@@ -11,7 +11,8 @@
           <router-link to="/UE" class="catalog-item">UE编辑器插件</router-link>
           <router-link to="/ckeditor" class="catalog-item">ckeditor编辑器插件</router-link>
           <router-link to="/ridingLantern" class="catalog-item">文字无缝滚动,鼠标移动上去后移动暂停</router-link>
-          <router-link to="/rideLanternTwo">flex布局下的文字无缝滚动</router-link>
+          <router-link to="/rideLanternTwo" class="catalog-item">flex布局下的文字无缝滚动</router-link>
+          <router-link to="/handleTime">Dayjs的使用</router-link>
       </div>
   </div>
 </template>

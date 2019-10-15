@@ -58,6 +58,11 @@ export default new Router({
       path:'/rideLanternTwo',
       name:'rideLanternTwo',
       component: () => import('./components/RidingLatern/RideLanternTwo.vue')
+    },
+    {
+      path:'/handleTime',
+      name:'handleTime',
+      component: () => import('./components/HandleTime/Dayjs.vue')
     }
   ]
 })
