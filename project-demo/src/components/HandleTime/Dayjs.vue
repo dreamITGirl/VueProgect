@@ -13,6 +13,16 @@
         <p>获取年份:{{$d().year()}}  设置年份:{{$d().year(2020)}}</p>
         <p>获取月份:{{$d().month()}} 设置月份:{{$d().month(2).format('YYYY-MM-DD')}}</p>
         <p>设置时间:dayjs().set(unit : String, value : Int);{{$d().set('date',20).format('YYYY-MM-DD')}}</p>
+        <h4>相关时间的操作</h4>
+        <p>增加时间: dayjs().add(value : Number,unit : String) {{$d().add(1,'year')}}</p>
+        <p>减少时间: dayjs().subtract(value : Number,unit : String) {{$d().subtract(7,'month')}}</p>
+        <p>开头时间: dayjs().startOf(unit : String) {{$d().startOf('month').format('YYYY-MM-DD')}}</p>
+        <p>末尾时间: dayjs().endOf(unit : String) {{$d().endOf('month').format('YYYY-MM-DD')}}</p>
+        <p>获取时间差: 见函数getTimeDiff()</p>
+        <p>Unix时间戳 dayjs().valueOf() {{$d().valueOf()}}</p>
+        <p>Unix时间戳（秒） dayjs().unix() {{$d().unix()}}</p>
+        <p>UTC 偏移量 (分)  dayjs().utcOffset() {{$d().utcOffset()}}</p>
+        <p>天数 （月） dayjs().daysInMonth() {{$d().daysInMonth()}}</p>
     </div>
 </template>
 <script>
@@ -23,8 +33,19 @@ export default {
             currentTime: new Date().getTime()
         }
     },
+    created(){
+        this.getTimeDiff()
+    },
     methods:{
-
+        getTimeDiff(){
+            const date2 = this.$d('2019-10-15')
+            const date1 = this.$d('2019-11-20')
+            
+            console.log( date1.diff(date2));
+            console.log(  date1.diff(date2,'month'));
+            console.log( date1.diff(date2,'month',true));  
+            console.log( date1.diff(date2,'day'));
+        }
     }
 }
 </script>
