@@ -63,6 +63,11 @@ export default new Router({
       path:'/handleTime',
       name:'handleTime',
       component: () => import('./components/HandleTime/Dayjs.vue')
+    },
+    {
+      path:'/bubbleSort',
+      name:'bubbleSort',
+      component: () => import('./components/Sort/BubbleSort.vue')
     }
   ]
 })

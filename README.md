@@ -12,4 +12,5 @@
    6. 富文本编辑器的使用一 (src/components/editor)
    7. 文字无缝滚动的示例 (src/components/RidingLatern)
    8. Dayjs的使用(src/components/HandleTime)
+   9. js冒泡排序(src/components/Sort/BubbleSort)
 
