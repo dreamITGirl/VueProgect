@@ -68,6 +68,16 @@ export default new Router({
       path:'/bubbleSort',
       name:'bubbleSort',
       component: () => import('./components/Sort/BubbleSort.vue')
+    },
+    {
+      path:'/interviewQuestion',
+      name:'interviewQuestion',
+      component: () => import('./components/Interview/Demo.vue')
+    },
+    {
+      path:'/fliterViews',
+      name:'filterViews',
+      component: () => import('./components/FilterViews/Filter.vue')
     }
   ]
 })

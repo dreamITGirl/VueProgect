@@ -14,6 +14,8 @@
           <router-link to="/rideLanternTwo" class="catalog-item">flex布局下的文字无缝滚动</router-link>
           <router-link to="/handleTime" class="catalog-item">Dayjs的使用</router-link>
           <router-link to="/bubbleSort" class="catalog-item">js 冒泡排序</router-link>
+          <router-link to="/interviewQuestion" class="catalog-item">JS面试题进阶</router-link>
+           <router-link to="/fliterViews" class="catalog-item">筛选条件的选择</router-link>
       </div>
   </div>
 </template>
