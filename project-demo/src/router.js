@@ -78,6 +78,11 @@ export default new Router({
       path:'/fliterViews',
       name:'filterViews',
       component: () => import('./components/FilterViews/Filter.vue')
+    },
+    {
+      path:'/map3d',
+      name:'map3d',
+      component: () => import('./components/RenderMap/RenderMap3d.vue')
     }
   ]
 })

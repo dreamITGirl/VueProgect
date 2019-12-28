@@ -11,6 +11,7 @@
     </div>
 </template>
 <script>
+const apiOne = 'http://jsonplaceholder.typicode.com/comments'
 export default {
     name:'filterViews',
     data(){
@@ -27,66 +28,26 @@ export default {
             chooseItem:[]
         }
     },
+    created(){
+        this.getAllCategory()
+    },
     methods:{
         selectType(params){
             console.log(params,'params==');
-            switch (params.id) {
-                case 0: this.chooseItemList = [
-                            {id:0,name:'大类一种的小类1'},
-                            {id:1,name:'大类一种的小类2'},
-                            {id:2,name:'大类一种的小类3'},
-                            {id:3,name:'大类一种的小类4'},
-                            {id:4,name:'大类一种的小类5'},
-                            {id:5,name:'大类一种的小类6'}
-                        ]
-                    break;
-                case 1:this.chooseItemList = [
-                            {id:0,name:'大类二中的小类1'},
-                            {id:1,name:'大类二中的小类2'},
-                            {id:2,name:'大类二中的小类3'},
-                            {id:3,name:'大类二中的小类4'},
-                            {id:4,name:'大类二中的小类5'},
-                            {id:5,name:'大类二中的小类6'}
-                        ]
-                    break;
-                case 2: this.chooseItemList = [
-                            {id:0,name:'大类三中的小类1'},
-                            {id:1,name:'大类三中的小类2'},
-                            {id:2,name:'大类三中的小类3'},
-                            {id:3,name:'大类三中的小类4'},
-                            {id:4,name:'大类三中的小类5'},
-                            {id:5,name:'大类三中的小类6'}
-                        ]
-                    break;
-                case 3: this.chooseItemList = [
-                            {id:0,name:'大类四中的小类1'},
-                            {id:1,name:'大类四中的小类2'},
-                            {id:2,name:'大类四中的小类3'},
-                            {id:3,name:'大类四中的小类4'},
-                            {id:4,name:'大类四中的小类5'},
-                            {id:5,name:'大类四中的小类6'}
-                        ]
-                    break;
-                case 4:this.chooseItemList = [
-                            {id:0,name:'大类五中的小类1'},
-                            {id:1,name:'大类五中的小类2'},
-                            {id:2,name:'大类五中的小类3'},
-                            {id:3,name:'大类五中的小类4'},
-                            {id:4,name:'大类五中的小类5'},
-                            {id:5,name:'大类五中的小类6'}
-                        ]
-                    break;
-                case 5:this.chooseItemList = [
-                            {id:0,name:'大类六中的小类1'},
-                            {id:1,name:'大类六中的小类2'},
-                            {id:2,name:'大类六中的小类3'},
-                            {id:3,name:'大类六中的小类4'},
-                            {id:4,name:'大类六中的小类5'},
-                            {id:5,name:'大类六中的小类6'}
-                        ]
-                break;
-            }
-            
+        },
+        getAllCategory(){
+            this.$http.get(apiOne).then((res) => {
+                this.category = res.data.splice(0,20)
+            })
+        },
+        getGroupData(data){
+            // for (let i = 0; i < data.length; i++) {
+                
+            // }
+            let tempArr = []
+            tempArr = data.map((postId)=>{
+                
+            })
         }
     }
 }
