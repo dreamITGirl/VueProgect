@@ -83,6 +83,16 @@ export default new Router({
       path:'/map3d',
       name:'map3d',
       component: () => import('./components/RenderMap/RenderMap3d.vue')
+    },
+    {
+      path:'/BarCharts',
+      name:'barCharts',
+      component: () => import('./components/Charts/BarCharts.vue')
+    },
+    {
+      path:'/BaiduMap',
+      name:'mapBaidu',
+      component: () => import('./components/BaiduMap/MapRender.vue')
     }
   ]
 })

@@ -17,6 +17,8 @@
           <router-link to="/interviewQuestion" class="catalog-item">JS面试题进阶</router-link>
           <router-link to="/fliterViews" class="catalog-item">筛选条件的选择</router-link>
           <router-link to="/map3d" class="catalog-item">3D地图的绘制</router-link>
+          <router-link to="/BarCharts" class="catalog-item">柱形图的展示</router-link>
+          <router-link to="/BaiduMap" class="catalog-item">百度地图的展示</router-link>
       </div>
   </div>
 </template>

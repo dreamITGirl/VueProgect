@@ -17,6 +17,7 @@
     "element-ui": "^2.10.1",
     "vis-network": "^5.0.0",
     "vue": "^2.6.10",
+    "vue-baidu-map": "^0.21.22",
     "vue-router": "^3.0.3",
     "vue-seamless-scroll": "^1.1.17",
     "vuedraggable": "^2.23.0",
