@@ -15,4 +15,7 @@
    9. js冒泡排序(src/components/Sort/BubbleSort)
    10. JS面试题进阶(src/components/Interview/Demo)
    11. 筛选条件的选择(src/components/FilterViews/Filter)
+   12. 3D地图的绘制( src/components//RenderMap/RenderMap3d)
+   13. 柱形图的展示(src/components/Charts/BarCharts)
+   14. 百度地图的展示和搜索及定位(src/components/BaiduMap/MapRender.vue)
 
